@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.8.2)
+  - MBProgressHUD (1.1.0)
+  - ObjectMapper (3.5.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - MBProgressHUD
+  - ObjectMapper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - MBProgressHUD
+    - ObjectMapper
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+
+PODFILE CHECKSUM: abb65e3745cad414ea0a2d382c536d9415c21cc7
+
+COCOAPODS: 1.5.3
