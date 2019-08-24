@@ -41,7 +41,7 @@ open class BaseFoundationModel<T>: BaseModel {
     
     open override func mapping(map: Map) {
         super.mapping(map: map)
-        data <- map["result"]
+        data <- map["data"]
     }
 }
 
@@ -58,7 +58,7 @@ open class BaseSingleModel<T:Mappable>: BaseModel {
     
     open override func mapping(map: Map) {
         super.mapping(map: map)
-        data <- map["result"]
+        data <- map["data"]
     }
 }
 
@@ -75,7 +75,7 @@ open class BaseArrayModel<T:Mappable>: BaseModel {
     
     open override func mapping(map: Map) {
         super.mapping(map: map)
-        data <- map["result"]
+        data <- map["data"]
     }
 }
 
@@ -92,6 +92,6 @@ open class BaseArrayArrayModel<T:Mappable>: BaseModel {
     
     open override func mapping(map: Map) {
         super.mapping(map: map)
-        data <- map["result"]
+        data <- map["data"]
     }
 }

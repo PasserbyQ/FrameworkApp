@@ -10,7 +10,9 @@
 		0E0761E322FFBE7000690313 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0761E222FFBE7000690313 /* BaseModel.swift */; };
 		0E0761E522FFCD3C00690313 /* UIView+MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0761E422FFCD3C00690313 /* UIView+MBProgressHUD.swift */; };
 		0E0761E722FFCEAF00690313 /* MBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0761E622FFCEAF00690313 /* MBProgressHUD.swift */; };
-		0E0761E922FFD36D00690313 /* MapperUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0761E822FFD36D00690313 /* MapperUtil.swift */; };
+		0E0761E922FFD36D00690313 /* BaseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0761E822FFD36D00690313 /* BaseMappable.swift */; };
+		0E0BB091231115760088B255 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0BB090231115760088B255 /* CacheManager.swift */; };
+		0E0BB09323111D970088B255 /* NSObject+Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0BB09223111D970088B255 /* NSObject+Runtime.swift */; };
 		0E0FC27E22FEDB6600927B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FC27D22FEDB6600927B47 /* AppDelegate.swift */; };
 		0E0FC28022FEDB6600927B47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0FC27F22FEDB6600927B47 /* ViewController.swift */; };
 		0E0FC28322FEDB6600927B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0FC28122FEDB6600927B47 /* Main.storyboard */; };
@@ -40,7 +42,9 @@
 		0E0761E222FFBE7000690313 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		0E0761E422FFCD3C00690313 /* UIView+MBProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MBProgressHUD.swift"; sourceTree = "<group>"; };
 		0E0761E622FFCEAF00690313 /* MBProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBProgressHUD.swift; sourceTree = "<group>"; };
-		0E0761E822FFD36D00690313 /* MapperUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperUtil.swift; sourceTree = "<group>"; };
+		0E0761E822FFD36D00690313 /* BaseMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMappable.swift; sourceTree = "<group>"; };
+		0E0BB090231115760088B255 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		0E0BB09223111D970088B255 /* NSObject+Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Runtime.swift"; sourceTree = "<group>"; };
 		0E0FC27A22FEDB6600927B47 /* FrameworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0FC27D22FEDB6600927B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E0FC27F22FEDB6600927B47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				0E0FC2A822FEF6BE00927B47 /* EnvManager.swift */,
-				0E0761E822FFD36D00690313 /* MapperUtil.swift */,
+				0E0BB090231115760088B255 /* CacheManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -189,6 +193,8 @@
 				0E0FC2A422FEF5AC00927B47 /* UIView+Nib.swift */,
 				0E0761E422FFCD3C00690313 /* UIView+MBProgressHUD.swift */,
 				0E0761E622FFCEAF00690313 /* MBProgressHUD.swift */,
+				0E0BB09223111D970088B255 /* NSObject+Runtime.swift */,
+				0E0761E822FFD36D00690313 /* BaseMappable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,14 +396,16 @@
 				0E0FC2BE22FEFAF700927B47 /* HomeViewModel.swift in Sources */,
 				0E0FC29F22FEE05E00927B47 /* UIColor.swift in Sources */,
 				0E0FC29D22FEDE8600927B47 /* String.swift in Sources */,
+				0E0BB09323111D970088B255 /* NSObject+Runtime.swift in Sources */,
 				0E0FC2BC22FEFAE700927B47 /* HomeModel.swift in Sources */,
+				0E0BB091231115760088B255 /* CacheManager.swift in Sources */,
 				0E0FC29922FEDD9000927B47 /* Const.swift in Sources */,
 				0E0FC2A922FEF6BE00927B47 /* EnvManager.swift in Sources */,
 				0E0FC28022FEDB6600927B47 /* ViewController.swift in Sources */,
 				0E0761E722FFCEAF00690313 /* MBProgressHUD.swift in Sources */,
 				0E0FC2BA22FEFAD700927B47 /* HomeView.swift in Sources */,
 				0E0FC2A122FEE24C00927B47 /* UIStoryboard.swift in Sources */,
-				0E0761E922FFD36D00690313 /* MapperUtil.swift in Sources */,
+				0E0761E922FFD36D00690313 /* BaseMappable.swift in Sources */,
 				0E0FC2AB22FEF88D00927B47 /* AppDelegate+PushService.swift in Sources */,
 				0E0FC2B022FEFA2F00927B47 /* NavigationController.swift in Sources */,
 				0E0FC2A322FEE32800927B47 /* UITableView.swift in Sources */,

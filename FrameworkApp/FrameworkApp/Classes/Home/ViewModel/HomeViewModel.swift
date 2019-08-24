@@ -18,13 +18,14 @@ class HomeViewModel: NSObject {
      * 获取数据
      */
     func getData(success: @escaping Success,fail: @escaping Fail) {
-        PQSessionManager.shared.get("") { (completion) in
+        PQSessionManager.shared.get(URLs.jods) { (completion) in
             switch completion {
                 
             case let .success(response):
                 
                 if let data = Mapper<BaseArrayModel<HomeModel>>().map(JSONObject: response.result.value)?.data {
                     self.dataList = data
+                    print(data.first?.job,data.last?.salary)
                 }
                 success()
             case let .fail(code,message):

@@ -26,17 +26,17 @@ class EnvManager: NSObject {
      */
     func changeEnvironment(type:EnvType) {
         
-        var server = "http://10.19.146.153:8080"
+        let server = "https://www.easy-mock.com/mock/5d243e84e60018399bbd3a6d"
         if type == .dev {
-            server = "http://10.19.146.153:8080"
+//            server = "http://127.0.0.1:8080"
         } else if type == .test {
-            server = "http://110.19.46.53:8080"
+//            server = "http://127.0.0.1:8080"
         } else {
-            server = "https://city-express.zto.com"
+//            server = "http://127.0.0.1:8080"
         }
         envType = type
         // 进行存储
-        //CacheManager.shared.set(server, "server")
+        CacheManager.shared.server = server
     }
     
 }

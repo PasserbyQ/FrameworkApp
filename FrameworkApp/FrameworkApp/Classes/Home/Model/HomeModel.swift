@@ -10,17 +10,13 @@
 import UIKit
 import ObjectMapper
 
-class HomeModel: Mappable {
+@objcMembers class HomeModel: BaseMappable {
     
-    var name: String?
-    
-    required init?(map: Map) {
-        
-    }
-    
-    func mapping(map: Map) {
-        name <- map["name"]
-    }
-    
-    
+    var ids: String?
+    var job: String?
+    var salary: String = ""
+    var info: String = "1"
+    var head: String = "1"
+    var publish: String = "1"
+
 }

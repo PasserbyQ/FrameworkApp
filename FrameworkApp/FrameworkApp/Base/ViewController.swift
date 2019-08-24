@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        MBProgressHUD.showError("失败了")
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//            MBProgressHUD.hide()
+//        }
+    }
+    
+    @IBAction func test() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
 
 }
 
