@@ -8,12 +8,21 @@
 
 import UIKit
 import MBProgressHUD
+import RxCocoa
+import RxSwift
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
 
+
+    let disposed = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -23,6 +32,27 @@ class ViewController: UIViewController {
 //            MBProgressHUD.hide()
 //        }
     }
+    
+    
+    func addObserver() {
+        
+        let phoneValid = phoneTextField.rx.text.orEmpty
+            .map{ $0.count > 5 }
+            .share(replay: 1)
+        
+        let passwordValid = passwordTextField.rx.text.orEmpty
+            .map{ $0.count > 2 }
+            .share(replay: 1)
+        
+        let everyValid = Observable.combineLatest(phoneValid,passwordValid) { $0 && $1 }
+            .share(replay: 1)
+        
+        everyValid.subscribe(onNext: { [unowned self] (validate) in
+            self.loginButton.isEnabled = validate
+        }).disposed(by: disposed)
+    }
+    
+    
     
     @IBAction func test() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")

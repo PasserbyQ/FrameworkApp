@@ -59,6 +59,7 @@ extension MBProgressHUD {
         hud.detailsLabel.textColor = .white
         hud.detailsLabel.font = UIFont.systemFont(ofSize: 15)
         hud.margin = 10
+        hud.isSquare = true
         hud.isUserInteractionEnabled = false
         hud.removeFromSuperViewOnHide = true
         //HUD窗口显示1秒后自动隐藏
@@ -80,6 +81,7 @@ extension MBProgressHUD {
         hud.detailsLabel.textColor = .white
         hud.detailsLabel.font = UIFont.systemFont(ofSize: 15)
         hud.margin = 10
+        hud.isSquare = true
         hud.isUserInteractionEnabled = false
         hud.removeFromSuperViewOnHide = true
         //HUD窗口显示1秒后自动隐藏

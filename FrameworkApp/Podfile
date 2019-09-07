@@ -14,5 +14,9 @@ target 'FrameworkApp' do
   # 网络
   pod 'Alamofire'
   
+  # RX
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
   
 end

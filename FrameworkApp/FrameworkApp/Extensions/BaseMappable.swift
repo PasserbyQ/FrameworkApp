@@ -10,6 +10,9 @@ import UIKit
 import ObjectMapper
 import Alamofire
 
+/**
+ * model继承该类，减少大量重复代码
+ */
 class BaseMappable: NSObject, Mappable {
     
     required init?(map: Map) {

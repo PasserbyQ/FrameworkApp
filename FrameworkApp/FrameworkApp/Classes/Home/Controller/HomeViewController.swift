@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         bindViewModel()
+        addObserver()
     }
     
     /**
@@ -34,6 +35,21 @@ class HomeViewController: UIViewController {
             weakself?.view.hideMPMessage()
             weakself?.view.showMBMessage(message)
         }
+    }
+    
+    /**
+     * 通知
+     */
+    
+    func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(login), name: NSNotification.Name.login, object: nil)
+    }
+    
+    /**
+     * 
+     */
+    @objc func login() {
+        
     }
     
 
